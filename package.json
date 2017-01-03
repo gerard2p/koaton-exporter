@@ -21,7 +21,7 @@
         "semantic-release": "semantic-release pre && npm publish && semantic-release post"
     },
     "bin": {
-        "koaton-export": "./koaton-export"
+        "koaton-exporter": "./koaton-exporter"
     },
     "directories": {
         "lib": "lib"
