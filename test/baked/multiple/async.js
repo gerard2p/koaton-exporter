@@ -2,6 +2,10 @@
 
 const koa = require('koa').default;
 
+const declar = function* declar(next) {
+	yield next;
+};
+
 function* koaStyle(next) {
 	yield next;
 }
@@ -29,3 +33,10 @@ koa.use(function* (next) {
 	const ms = new Date() - start;
 	console.log(`${ this.method } ${ this.url } - ${ ms }ms`);
 });
+
+function* innerAsyncs(next) {
+	this.fn = function* (a, b) {
+		return a;
+	};
+	yield next;
+}

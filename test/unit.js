@@ -23,8 +23,6 @@ describe('Koaton Unit Testing', function () {
 	it('Compiles multiple files', function (done) {
 		process.argv = ['./test/example/multiple/*.js', './output_test', '-t', 'v1', '-r', 'test/'];
 		transpile(() => {
-			console.log(read('./output_test/example/multiple/async.js'));
-			console.log(read('./test/baked/multiple/async.js'));
 			assert.equal(read('./output_test/example/multiple/imports.js'), read('./test/baked/multiple/imports.js'));
 			assert.equal(read('./output_test/example/multiple/async.js'), read('./test/baked/multiple/async.js'));
 			assert.equal(read('./output_test/example/multiple/exports.js'), read('./test/baked/multiple/exports.js'));

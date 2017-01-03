@@ -1,5 +1,9 @@
 import koa from 'koa';
 
+const declar = async function declar (ctx, next) {
+	await next();
+};
+
 async function koaStyle (ctx, next) {
 	await next();
 }
@@ -27,3 +31,10 @@ koa.use(async (ctx, next) => {
 	const ms = new Date() - start;
 	console.log(`${ctx.method} ${ctx.url} - ${ms}ms`);
 });
+
+async function innerAsyncs (ctx, next) {
+	ctx.fn = async function (a, b) {
+		return a;
+	};
+	await next();
+}
