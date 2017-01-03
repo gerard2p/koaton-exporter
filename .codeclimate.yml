@@ -1,0 +1,40 @@
+---
+engines:
+    duplication:
+        enabled: true
+        config:
+            languages:
+                javascript:
+                    mass_threshold: 59
+
+    eslint:
+      enabled: true
+      config:
+        config: ./.eslintrc
+    fixme:
+        enabled: true
+ratings:
+    paths:
+        - src/**
+exclude_paths:
+    - "reloadcoverage.js"
+    - "LICENSE"
+    - "README.md"
+    - "koaton-exporter"
+    - "package.json"
+    - ".nyc_output/"
+    - docs/
+    - core/
+    - node_modules/
+    - lib/
+    - test/
+    - testcoverage/
+    - testingapp/
+    - templates/
+    - koaton
+    - ".*"
+    - "./**.json"
+    - "./*.js"
+
+
+
