@@ -37,32 +37,49 @@
   "license": "MIT",
   "readmeFilename": "README.md",
   "dependencies": {
-    "babel-core": "^6.18.2",
-    "babel-plugin-istanbul": "^3.1.2",
-    "babel-plugin-transform-koa2-async-to-generator": "^1.0.0",
+    "babel-core": "^6.21.0",
+    "babel-plugin-istanbul": "^3.0.0",
+    "babel-plugin-transform-koa2-async-to-generator": "^1.0.1",
     "babel-plugin-transform-koaton-es6-modules": "git+https://gerardopp@bitbucket.org/gerardopp/babel-plugin-transform-koaton-es6-modules.git",
     "babel-plugin-transform-strict-mode": "^6.18.0",
     "bluebird": "^3.4.7",
+    "fs-extra": "^1.0.0",
+    "upath": "^0.2.0"
+  },
+  "devDependencies": {
+    "chokidar": "^1.6.1",
     "commitizen": "^2.8.6",
     "cz-conventional-changelog": "^1.2.0",
-    "eslint": "^3.12.2",
+    "eslint": "^3.13.1",
     "eslint-config-happiness": "^5.3.1",
-    "eslint-plugin-promise": "^3.4.0",
-    "eslint-plugin-standard": "^2.0.1",
-    "fs-extra": "^1.0.0",
-    "glob": "^7.1.1",
-    "mocha": "^3.1.0",
+    "gulp-livereload": "^3.8.1",
+    "mocha": "^3.2.0",
     "npm-run-all": "^4.0.0",
     "nyc": "^10.0.0",
-    "semantic-release": "^6.3.2",
-    "upath": "^0.2.0"
+    "semantic-release": "^6.3.2"
   },
   "config": {
     "commitizen": {
       "path": "cz-conventional-changelog"
     }
   },
+  "subdomain": "bcrypt-test",
+  "babel": {
+    "plugins": [
+      "babel-plugin-transform-koaton-es6-modules",
+      "istanbul"
+    ]
+  },
+  "keywords": [
+    "koaton",
+    "cli",
+    "koa"
+  ],
   "nyc": {
+    "lines": 99,
+    "statements": 99,
+    "functions": 99,
+    "branches": 99,
     "reporter": [
       "lcov",
       "text"
@@ -78,33 +95,8 @@
     "all": false,
     "report-dir": "./coverage"
   },
-  "subdomain": "bcrypt-test",
-  "domains": [],
-  "databases": {},
-  "babel": {
-    "plugins": [
-      "babel-plugin-transform-koaton-es6-modules",
-      "babel-plugin-transform-koa2-async-to-generator",
-      "istanbul"
-    ],
-    "ignore": [
-      "docs/",
-      "lib/",
-      "node_modules/"
-    ]
-  },
-  "keywords": [
-    "koaton",
-    "cli",
-    "koa"
-  ],
   "files": [
     "lib",
     "koaton-exporter"
-  ],
-  "devDependencies": {
-    "babel-plugin-istanbul": "^3.0.0",
-    "chokidar": "^1.6.1",
-    "gulp-livereload": "^3.8.1"
-  }
+  ]
 }
