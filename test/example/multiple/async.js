@@ -1,5 +1,9 @@
 import koa from 'koa';
 
+async function nokoastyle (promise) {
+	await promise;
+}
+
 const declar = async function declar (ctx, next) {
 	await next();
 };

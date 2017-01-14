@@ -18,6 +18,12 @@ const config = {
 	}
 };
 
+/**
+ * getIndex - description
+ *
+ * @param  {type} param description
+ * @return {type}       description
+ */
 function getIndex (param) {
 	let index = process.argv.indexOf(param);
 	let val;
@@ -45,6 +51,6 @@ function transpile (/* istanbul ignore next*/ cb = () => {}) {
 			return writeFile(target, content.code, {});
 		}));
 	}
-	Promise.all(converting).then(cb);
+	Promise.all(converting).then(cb).catch(console.log);
 }
 export default transpile;

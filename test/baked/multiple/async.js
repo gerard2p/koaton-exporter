@@ -2,6 +2,10 @@
 
 const koa = require('koa').default;
 
+function* nokoastyle(promise) {
+	yield promise;
+}
+
 const declar = function* declar(next) {
 	yield next;
 };
@@ -16,8 +20,8 @@ const koaStyle3 = function* (next) {
 	yield next;
 };
 
-koa.use(function* () {
-	this.body = 'Hello Koa';
+koa.use(ctx => {
+	ctx.body = 'Hello Koa';
 });
 koa.use(function* (next) {
 	const start = new Date();
