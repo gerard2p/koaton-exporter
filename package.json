@@ -52,6 +52,8 @@
     "cz-conventional-changelog": "^1.2.0",
     "eslint": "^3.13.1",
     "eslint-config-happiness": "^5.3.1",
+    "eslint-plugin-promise": "^3.4.0",
+    "eslint-plugin-standard": "^2.0.1",
     "gulp-livereload": "^3.8.1",
     "mocha": "^3.2.0",
     "npm-run-all": "^4.0.0",

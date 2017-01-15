@@ -34,10 +34,11 @@ function getIndex (param) {
 	return val;
 }
 
-function transpile (/* istanbul ignore next*/ cb = () => {}) {
+function transpile (/* istanbul ignore next*/ cb = () => { }) {
 	let converting = [];
 	let version = getIndex('-t') || 'v1';
 	let replace = getIndex('-r') || '';
+	let extension = getIndex('-e') || null;
 	let sources = [];
 	let output = process.argv.pop();
 	for (const files of process.argv) {
@@ -46,6 +47,9 @@ function transpile (/* istanbul ignore next*/ cb = () => {}) {
 	fs.emptyDirSync(output);
 	for (const source of sources) {
 		let target = path.resolve(output, source).replace(replace, '');
+		if (extension) {
+			target = path.changeExt(target, `.${extension}`);
+		}
 		fs.ensureDirSync(path.dirname(target));
 		converting.push(transform(source, config[version]).then(content => {
 			return writeFile(target, content.code, {});

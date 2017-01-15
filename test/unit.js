@@ -20,6 +20,13 @@ describe('Koaton Unit Testing', function () {
 			done(null, true);
 		});
 	});
+	it('Compiles changes extension of a file', function (done) {
+		process.argv = ['./test/example/example.esnext', './output_test', '-e', 'js'];
+		transpile(() => {
+			assert.equal(read('./output_test/test/example/example.js'), read('./test/baked/example.js'));
+			done(null, true);
+		});
+	});
 	it('Compiles multiple files', function (done) {
 		process.argv = ['./test/example/**/*.js', './output_test', '-t', 'v1', '-r', 'test/'];
 		transpile(() => {
