@@ -38,8 +38,7 @@
   "readmeFilename": "README.md",
   "dependencies": {
     "babel-core": "^6.21.0",
-    "babel-plugin-istanbul": "^3.0.0",
-    "babel-plugin-transform-koa2-async-to-generator": "^1.0.1",
+    "babel-plugin-transform-koa2-async-to-generator": "^1.0.0",
     "babel-plugin-transform-koaton-es6-modules": "git+https://gerardopp@bitbucket.org/gerardopp/babel-plugin-transform-koaton-es6-modules.git",
     "babel-plugin-transform-strict-mode": "^6.18.0",
     "bluebird": "^3.4.7",
@@ -47,6 +46,7 @@
     "upath": "^0.2.0"
   },
   "devDependencies": {
+    "babel-plugin-istanbul": "^3.0.0",
     "chokidar": "^1.6.1",
     "commitizen": "^2.8.6",
     "cz-conventional-changelog": "^1.2.0",
@@ -66,6 +66,7 @@
   "subdomain": "bcrypt-test",
   "babel": {
     "plugins": [
+      
       "babel-plugin-transform-koaton-es6-modules",
       "istanbul"
     ]
