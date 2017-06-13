@@ -68,6 +68,7 @@ function transpile (/* istanbul ignore next*/ cb = () => {}) {
 	let sources = [];
 	let output = process.argv.pop();
 
+	/* istanbul ignore next*/
 	if (nodeVersion < 7.6 && version === 'v2') {
 		console.error(`Minimun node version is 7.6 for koa ${version}`);
 		return Promise.resolve(1);
@@ -78,6 +79,7 @@ function transpile (/* istanbul ignore next*/ cb = () => {}) {
 	sources = sources.filter(function (item, pos, self) {
 		return self.indexOf(item) === pos;
 	});
+	/* istanbul ignore else*/
 	if (sources.length > 0) {
 		fs.ensureDirSync(output);
 	}

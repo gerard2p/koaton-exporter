@@ -4,7 +4,8 @@ branches:
     - master
 language: node_js
 node_js:
-  - "6.9.2"
+  - "7.6.0"
+  - "8.1.0"
 cache:
   directories:
     - node_modules
