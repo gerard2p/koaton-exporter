@@ -28,14 +28,14 @@ koa.use(function* (next) {
 	yield next;
 
 	const ms = new Date() - start;
-	console.log(`${ this.method } ${ this.url } - ${ ms }ms`);
+	console.log(this.method, this.url, ms + 'ms');
 });
 
 koa.use(function* (next) {
 	const start = new Date();
 	yield next;
 	const ms = new Date() - start;
-	console.log(`${ this.method } ${ this.url } - ${ ms }ms`);
+	console.log(this.method, this.url, ms + 'ms');
 });
 
 function* innerAsyncs(next) {
