@@ -48,6 +48,7 @@
   },
   "devDependencies": {
     "babel-plugin-istanbul": "^3.0.0",
+    "babel-preset-env": "^1.5.2",
     "chokidar": "^1.6.1",
     "commitizen": "^2.8.6",
     "cz-conventional-changelog": "^1.2.0",

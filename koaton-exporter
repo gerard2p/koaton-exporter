@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 require('babel-register');
 process.argv.splice(0, 2);
-require('./lib').default(() => {
+require('./lib').default((files) => {
+	console.log(files.join('\n'));
 	console.log('All files converted');
 });
