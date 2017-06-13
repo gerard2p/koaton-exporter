@@ -29,12 +29,12 @@ const config = {
 	},
 	v2: {
 		babelrc: false,
-		"presets": [
-			["env", {
-				"targets": {
-					"node": "current"
+		'presets': [
+			['env', {
+				'targets': {
+					'node': 'current'
 				},
-				"exclude": ["transform-async-to-generator", "es6.set"]
+				'exclude': ['transform-async-to-generator']
 			}]
 		],
 		plugins: [
@@ -59,7 +59,8 @@ function getIndex (param) {
 	return val;
 }
 
-function transpile (/* istanbul ignore next*/ cb = () => {}) {
+function transpile ( /* istanbul ignore next*/ cb = () => {
+	} ) {
 	let converting = [];
 	let version = getIndex('-t') || 'v1';
 	let replace = getIndex('-r') || '';
