@@ -1,6 +1,7 @@
 # Koaton-Exporter
 
 [![Build Status](https://img.shields.io/travis/gerard2p/koaton-exporter/master.svg?style=flat-square)](https://travis-ci.org/gerard2p/koaton-exporter)[![Dependency Status](https://david-dm.org/gerard2p/koaton-exporter.svg?style=flat-square)](https://david-dm.org/gerard2p/koaton-exporter)![PRs Welcome](https://img.shields.io/badge/PRs%20🔀-Welcome-brightgreen.svg?style=flat-square)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fgerard2p%2Fkoaton-exporter.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fgerard2p%2Fkoaton-exporter?ref=badge_shield)
 
 [![Code Climate](https://codeclimate.com/github/gerard2p/koaton-exporter/badges/gpa.svg?style=flat-square)](https://codeclimate.com/github/gerard2p/koaton-exporter?style=flat-square) [![Test Coverage](https://codeclimate.com/github/gerard2p/koaton-exporter/badges/coverage.svg?style=flat-square)](https://codeclimate.com/github/gerard2p/koaton-exporter/coverage) [![Issue Count](https://codeclimate.com/github/gerard2p/koaton-exporter/badges/issue_count.svg?style=flat-square)](https://codeclimate.com/github/gerard2p/koaton-exporter)
 
@@ -14,3 +15,6 @@
 ```shell
 npm install koaton-exporter
 ```
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fgerard2p%2Fkoaton-exporter.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fgerard2p%2Fkoaton-exporter?ref=badge_large)
